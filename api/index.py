@@ -379,6 +379,13 @@ def index():
 
 # For Vercel: Export the Flask app as the handler
 # Vercel's @vercel/python will automatically wrap this as a serverless function
+
+# For Netlify/AWS Lambda
+import aws_lambda_wsgi
+
+def handler(event, context):
+    return aws_lambda_wsgi.response(app, event, context)
+
 if __name__ == "__main__":
     app.run(debug=True)
 
