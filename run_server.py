@@ -4,7 +4,7 @@ Simple script to run Flask server for local testing
 import socket
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), 'netlify', 'functions'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'functions'))
 from index import app
 
 def find_free_port(start_port=5001, max_attempts=10):
