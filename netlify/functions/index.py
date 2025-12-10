@@ -9,7 +9,7 @@ app = Flask(__name__)
 class PDF(FPDF):
     def header(self):
         # Try to load template image, if not found, continue without it
-        template_path = os.path.join(os.path.dirname(__file__), "..", "template_clean.jpg")
+        template_path = os.path.join(os.path.dirname(__file__), "template_clean.jpg")
         if os.path.exists(template_path):
             self.image(template_path, x=0, y=0, w=210, h=297)
 
